@@ -1,0 +1,7 @@
+server:
+  servlet:
+    context-path: /portalasig/uaa
+
+spring:
+  application:
+    name: portalasig-ms-uaa

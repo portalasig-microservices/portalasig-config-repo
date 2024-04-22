@@ -1,0 +1,1 @@
+# Portalasig configuration repository
