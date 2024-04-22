@@ -1,0 +1,12 @@
+spring:
+  jpa:
+    hibernate.ddl-auto: none
+    open-in-view: true
+  application:
+    flyway:
+      enabled: true
+
+---
+spring:
+  config.activate.on-profile: local
+

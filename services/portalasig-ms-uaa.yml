@@ -1,7 +1,16 @@
 server:
-  servlet:
-    context-path: /portalasig/uaa
+  servlet.context-path: /portalasig/uaa
 
 spring:
-  application:
-    name: portalasig-ms-uaa
+  profiles: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:11018/sstest
+    username: root
+    password: password
+  flyway:
+    password: password
+    user: root
+    schemas: sstest
+    locations: classpath:db/migration
+    url: jdbc:mysql://localhost:11018/
