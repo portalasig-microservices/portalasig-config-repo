@@ -1,5 +1,6 @@
 server:
   servlet.context-path: /portalasig/dashboard
+  port: 5861
 
 spring:
   config.activate.on-profile: local
@@ -13,4 +14,4 @@ spring:
     user: root
     schemas: sstest
     locations: classpath:db/migration
-    url: jdbc:mysql://localhost:11018/
+    url: jdbc:mysql://localhost:11019/

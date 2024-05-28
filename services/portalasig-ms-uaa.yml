@@ -1,5 +1,6 @@
 server:
   servlet.context-path: /portalasig/uaa
+  port: 5860
 
 spring:
   config.activate.on-profile: local
