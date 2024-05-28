@@ -1,5 +1,6 @@
 server:
   servlet.context-path: /portalasig/dashboard
+  port: 5861
 
 spring:
   config.activate.on-profile: local
