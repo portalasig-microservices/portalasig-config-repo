@@ -13,4 +13,4 @@ spring:
     user: root
     schemas: sstest
     locations: classpath:db/migration
-    url: jdbc:mysql://localhost:11018/
+    url: jdbc:mysql://localhost:11019/
