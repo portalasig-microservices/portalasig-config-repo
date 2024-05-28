@@ -1,0 +1,16 @@
+server:
+  servlet.context-path: /portalasig/dashboard
+
+spring:
+  config.activate.on-profile: local
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:11019/sstest
+    username: root
+    password: password
+  flyway:
+    password: password
+    user: root
+    schemas: sstest
+    locations: classpath:db/migration
+    url: jdbc:mysql://localhost:11018/
