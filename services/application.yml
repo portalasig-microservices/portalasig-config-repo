@@ -10,3 +10,10 @@ spring:
 spring:
   config.activate.on-profile: local
 
+ENV: local # This will be used later to make local point to CI services
+
+backend-uri: http://localhost
+
+portalasig.security.oauth2.authorization-server.jwt.issuer-uri: ${backend-uri}:5860/portalasig/uaa
+portalasig.uaa.ms.v1.uri: ${backend-uri}:5860/portalasig/uaa/v1
+
