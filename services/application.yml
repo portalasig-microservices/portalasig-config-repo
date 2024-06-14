@@ -9,11 +9,22 @@ spring:
 ---
 spring:
   config.activate.on-profile: local
+  security:
+    oauth2:
+      client:
+        registration:
+          portalasig_engine:
+            authorization-grant-type: client_credentials
+            client-id: portalasig_engine
+            client-secret: portalasig
+        provider:
+          portalasig_engine:
+            token-uri: http://localhost:5860/portalasig/uaa/oauth2/token
 
 ENV: local # This will be used later to make local point to CI services
 
 backend-uri: http://localhost
 
 portalasig.security.oauth2.authorization-server.jwt.issuer-uri: ${backend-uri}:5860/portalasig/uaa
-portalasig.uaa.ms.v1.uri: ${backend-uri}:5860/portalasig/uaa/v1
+portalasig.uaa.ms.v1.url: ${backend-uri}:5860/portalasig/uaa/v1
 
