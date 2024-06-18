@@ -8,10 +8,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:11018/sstest
     username: root
-    password: '{cypher}1529ad7e08b0d8355910f239ad1571e5953f6aaf718e1cc9c91a9fc9da346eb6'
+    password: '{cipher}1529ad7e08b0d8355910f239ad1571e5953f6aaf718e1cc9c91a9fc9da346eb6'
   flyway:
     user: root
-    password: '{cypher}1529ad7e08b0d8355910f239ad1571e5953f6aaf718e1cc9c91a9fc9da346eb6'
+    password: '{cipher}1529ad7e08b0d8355910f239ad1571e5953f6aaf718e1cc9c91a9fc9da346eb6'
     schemas: sstest
     locations: classpath:db/migration
     url: jdbc:mysql://localhost:11018/

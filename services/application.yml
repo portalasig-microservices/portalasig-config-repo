@@ -16,7 +16,7 @@ spring:
           portalasig_engine:
             authorization-grant-type: client_credentials
             client-id: portalasig_engine
-            client-secret: '{cypher}090795838436a9da213cd43610668adc041505c4a1b52255e63ca5d170b4d3997a0ef48effa75a8309e7fe6197a896b8'
+            client-secret: '{cipher}090795838436a9da213cd43610668adc041505c4a1b52255e63ca5d170b4d3997a0ef48effa75a8309e7fe6197a896b8'
         provider:
           portalasig_engine:
             token-uri: http://localhost:5860/portalasig/uaa/oauth2/token
