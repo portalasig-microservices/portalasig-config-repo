@@ -16,9 +16,9 @@ spring:
     locations: classpath:db/migration
     url: jdbc:mysql://localhost:11110/
 
-ms:
-  uaa:
+ms.uaa:
     tools:
       users:
         csv:
           input-header: name, lastname, email, identity_card, created_at, updated_at, role, active
+        default-user: '{cipher}9eb1176dd5eeb6e6a6a30420a7c9d4906491a6a2960e524bd9ab70f27eaaa71c'
