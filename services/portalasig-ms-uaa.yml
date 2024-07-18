@@ -21,5 +21,4 @@ ms:
     tools:
       users:
         csv:
-          input-header: name, last_name, email, identity_card, created_at, updated_at,
-            is_admin, is_student, is_professor
+          input-header: name, last_name, email, identity_card, created_at, updated_at, role, active
