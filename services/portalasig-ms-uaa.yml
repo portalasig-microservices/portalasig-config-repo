@@ -3,7 +3,10 @@ server:
   port: 5860
 
 spring:
+  application.name: portalasig-ms-uaa
   config.activate.on-profile: local
+  instance:
+    instance-id: '${spring.application.name}:${random.value}'
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:11110/sstest
