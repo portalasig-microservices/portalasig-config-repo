@@ -27,6 +27,4 @@ backend-uri: http://localhost
 
 portalasig.security.oauth2.authorization-server.jwt.issuer-uri: ${backend-uri}:5860/portalasig/uaa
 portalasig.uaa.ms.v1.url: ${backend-uri}:5860/portalasig/uaa/v1
-portalasig.registry-server.url: ${backend-uri}:5858/eureka
-eureka.client.service-url.defaultZone: ${portalasig.registry-server.url}
 

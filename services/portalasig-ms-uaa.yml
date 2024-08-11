@@ -17,8 +17,6 @@ spring:
     locations: classpath:db/migration
     url: jdbc:mysql://localhost:11110/
 
-eureka.instance.instance-id: "${spring.application.name}:${random.value}"
-
 ms.uaa:
     tools:
       users:
