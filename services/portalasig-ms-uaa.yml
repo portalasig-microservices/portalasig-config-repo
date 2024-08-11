@@ -1,6 +1,6 @@
 server:
   servlet.context-path: /portalasig/uaa
-  port: 5860
+#  port: 5860
 
 spring:
   application.name: portalasig-ms-uaa
