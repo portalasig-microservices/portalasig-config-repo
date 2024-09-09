@@ -21,8 +21,7 @@ spring:
           portalasig_engine:
             token-uri: http://localhost:5860/portalasig/uaa/oauth2/token
 
-ENV: local # This will be used later to make local point to CI services
-
+ENV: local
 backend-uri: http://localhost
 
 portalasig.security.oauth2.authorization-server.jwt.issuer-uri: ${backend-uri}:5860/portalasig/uaa
