@@ -1,5 +1,5 @@
 server:
-  servlet.context-path: /portalasig/dashboard
+  servlet.context-path: /portalasig/site
   port: 5861
 
 spring:
