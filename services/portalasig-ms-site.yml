@@ -15,3 +15,7 @@ spring:
     schemas: sstest
     locations: classpath:db/migration
     url: jdbc:mysql://localhost:11019/
+
+site:
+  semester:
+    default-creation-status: true
