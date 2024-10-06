@@ -30,10 +30,10 @@ spring:
             scope: openid,profile,email,phone,address
         provider:
           portalasig_engine:
-            token-uri: { portalasig.uaa.ms.url }/oauth2/token
+            token-uri: ${portalasig.uaa.ms.url}/oauth2/token
           portalasig_client:
-            token-uri: { portalasig.uaa.ms.url }/oauth2/token
-            authorization-uri: { portalasig.uaa.ms.url }/oauth2/authorize
+            token-uri: ${portalasig.uaa.ms.url}/oauth2/token
+            authorization-uri: ${portalasig.uaa.ms.url}/oauth2/authorize
 
 ENV: local
 backend-uri: http://localhost
