@@ -25,6 +25,8 @@ spring:
         provider:
           portalasig_engine:
             token-uri: http://localhost:5860/portalasig/uaa/oauth2/token
+          portalasig_client:
+            token-uri: http://localhost:5860/portalasig/uaa/oauth2/token
 
 ENV: local
 backend-uri: http://localhost
