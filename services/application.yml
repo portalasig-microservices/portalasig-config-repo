@@ -27,14 +27,13 @@ spring:
             client-secret: '{cipher}090795838436a9da213cd43610668adc041505c4a1b52255e63ca5d170b4d3997a0ef48effa75a8309e7fe6197a896b8'
             authorization-grant-type: authorization_code
             redirect-uri: ${portalasig.uaa.ms.url}/oauth2/code/{registrationId}
+            scope: openid,profile,email,phone,address
         provider:
           portalasig_engine:
             token-uri: { portalasig.uaa.ms.url }/oauth2/token
           portalasig_client:
             token-uri: { portalasig.uaa.ms.url }/oauth2/token
             authorization-uri: { portalasig.uaa.ms.url }/oauth2/authorize
-            user-info-uri: { portalasig.uaa.ms.url }/oauth2/userinfo
-            user-name-attribute: id
 
 ENV: local
 backend-uri: http://localhost
