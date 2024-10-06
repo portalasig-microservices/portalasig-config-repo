@@ -26,7 +26,7 @@ spring:
             client-id: portalasig_client
             client-secret: '{cipher}090795838436a9da213cd43610668adc041505c4a1b52255e63ca5d170b4d3997a0ef48effa75a8309e7fe6197a896b8'
             authorization-grant-type: authorization_code
-            redirect-uri: ${portalasig.uaa.ms.url}/oauth2/code/{registrationId}
+            redirect-uri: '${backend-uri}:8080/ingresar'
             scope: openid,profile,email,phone,address
         provider:
           portalasig_engine:
