@@ -3,10 +3,7 @@ name: Validate YAML Configuration Files
 on:
   pull_request:
     branches:
-      - main
-  push:
-    branches:
-      - main
+      - ms
 
 jobs:
   lint-yaml:
