@@ -19,3 +19,7 @@ spring:
 site:
   semester:
     default-creation-status: true
+  tools:
+    courses:
+      csv:
+        input-header: code, name, credit_units, type, requirements, careers, classifications
