@@ -1,7 +1,10 @@
-name: Validate YAML Configuration Files
+name: Validate YAML Files
 
 on:
   pull_request:
+    branches:
+      - ms
+  push:
     branches:
       - ms
 
@@ -22,4 +25,4 @@ jobs:
         run: pip install yamllint
 
       - name: Lint YAML files
-        run: yamllint . --strict
+        run: yamllint . --config-file .yamllint --strict
