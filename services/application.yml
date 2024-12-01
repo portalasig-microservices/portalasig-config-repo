@@ -42,4 +42,3 @@ portalasig.security.oauth2.authorization-server.jwt.issuer-uri: ${backend-uri}:5
 portalasig.uaa.ms:
   v1.url: ${backend-uri}:5860/portalasig/uaa/v1
   url: ${backend-uri}:5860/portalasig/uaa
-

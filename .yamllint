@@ -1,0 +1,23 @@
+extends: relaxed
+rules:
+  indentation:
+    spaces: 2
+  line-length:
+    max: 150
+    level: warning
+  trailing-spaces: enable
+  key-ordering: disable
+  brackets:
+    level: warning
+  document-start: disable
+  document-end: disable
+  empty-values:
+    forbid-in-block-mappings: false
+  comments:
+    level: warning
+  truthy:
+    level: warning
+  new-line-at-end-of-file: disable
+
+ignore:
+  - .github
