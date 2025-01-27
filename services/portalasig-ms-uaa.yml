@@ -16,6 +16,11 @@ spring:
     schemas: sstest
     locations: classpath:db/migration
     url: jdbc:mysql://localhost:11110/
+  jpa:
+    properties.hibernate:
+      jdbc.batch_size: 50
+      order_inserts: true
+      order_updates: true
 
 ms.uaa:
   password-grant.default-client-id: portalasig_client
