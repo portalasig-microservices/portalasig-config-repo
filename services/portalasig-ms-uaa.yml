@@ -29,3 +29,4 @@ ms.uaa:
       csv:
         input-header: name, lastname, email, identity_card, created_at, updated_at, role, active
       default-user: '{cipher}9eb1176dd5eeb6e6a6a30420a7c9d4906491a6a2960e524bd9ab70f27eaaa71c'
+      default-password: '{cipher}fc5c5c72fd646cd4814ee07977d39a6a6a76a094349d0775a0b9acccedd2b761'
