@@ -30,14 +30,3 @@ spring:
           connectiontimeout: 5000
           timeout: 5000
           writetimeout: 5000
-  mail:
-    host: smtp.gmail.com
-    port: 587
-    username: '{cipher}c7246779c0d3d680f6b66c5065c1df107ad81a765b22a6434c4ca335a8cf7594a78d05a1d0c125eb6bbc1f81e0252d5119e2136e9afad8e5d5659c8c2c21daba'
-    password: '{cipher}e137d7f1328d162513ca00588bfc52ffc641d9a9ec93acf6a3395873a87594f1f92036e2841d28a2d57840181472eb9d'
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
