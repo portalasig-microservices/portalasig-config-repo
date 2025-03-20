@@ -37,6 +37,7 @@ spring:
 
 ENV: local
 backend-uri: http://localhost
+frontend-uri: http://localhost
 
 portalasig.security.oauth2.authorization-server.jwt.issuer-uri: ${backend-uri}:5860/portalasig/uaa
 portalasig.uaa.ms:
@@ -44,3 +45,5 @@ portalasig.uaa.ms:
   url: ${backend-uri}:5860/portalasig/uaa
 portalasig.notify.ms:
   v1.url: ${backend-uri}:5862/portalasig/notify/v1
+portalasig.fe:
+  url: ${frontend-uri}:8080
