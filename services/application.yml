@@ -46,4 +46,4 @@ portalasig.uaa.ms:
 portalasig.notify.ms:
   v1.url: ${backend-uri}:5862/portalasig/notify/v1
 portalasig.fe:
-  url: ${frontend-uri}:8080
+  url: ${frontend-uri}:8080/#
