@@ -22,4 +22,4 @@ site:
   tools:
     courses:
       csv:
-        input-header: code, name, credit_units, type, requirements, careers, classifications
+        input-header: code, name, credit_units, type, requirements, careers, course_level
