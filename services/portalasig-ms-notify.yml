@@ -34,5 +34,6 @@ spring:
 portalasig:
   notify:
     email:
-      debug-mode:
+      debug:
         enabled: true
+        recipient: frankponte95@gmail.com
