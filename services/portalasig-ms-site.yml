@@ -23,3 +23,7 @@ site:
     courses:
       csv:
         input-header: code, name, credit_units, type, requirements, careers, course_level
+    students:
+      import:
+        input-header: nro, licenciatura, cedula, nombres, apellidos, correo, estado
+        email-blacklist: correo@servidor.com
