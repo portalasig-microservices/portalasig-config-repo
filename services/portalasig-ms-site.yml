@@ -25,5 +25,5 @@ site:
         input-header: code, name, credit_units, type, requirements, careers, course_level
     students:
       import:
-        input-header: nro, licenciatura, cedula, nombres, apellidos, correo, estado
+        input-header: NRO, LICENCIATURA, CEDULA, NOMBRES, APELLIDOS, CORREO, ESTADO
         email-blacklist: correo@servidor.com
