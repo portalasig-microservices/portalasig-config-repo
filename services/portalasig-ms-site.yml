@@ -6,13 +6,13 @@ spring:
   config.activate.on-profile: local
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:11019/sstest
+    url: jdbc:mysql://localhost:11019/patest
     username: root
-    password: '{cipher}1529ad7e08b0d8355910f239ad1571e5953f6aaf718e1cc9c91a9fc9da346eb6'
+    password: '{cipher}3fdc092d7bd28cc341871599df348b32408c64aa078c3ef86486c16d2e093072'
   flyway:
     user: root
-    password: '{cipher}1529ad7e08b0d8355910f239ad1571e5953f6aaf718e1cc9c91a9fc9da346eb6'
-    schemas: sstest
+    password: '{cipher}3fdc092d7bd28cc341871599df348b32408c64aa078c3ef86486c16d2e093072'
+    schemas: patest
     locations: classpath:db/migration
     url: jdbc:mysql://localhost:11019/
 
