@@ -20,11 +20,11 @@ spring:
         registration:
           portalasig_engine:
             client-id: portalasig_engine
-            client-secret: '{cipher}090795838436a9da213cd43610668adc041505c4a1b52255e63ca5d170b4d3997a0ef48effa75a8309e7fe6197a896b8'
+            client-secret: '{cipher}3fdc092d7bd28cc341871599df348b32408c64aa078c3ef86486c16d2e093072'
             authorization-grant-type: client_credentials
           portalasig_client:
             client-id: portalasig_client
-            client-secret: '{cipher}090795838436a9da213cd43610668adc041505c4a1b52255e63ca5d170b4d3997a0ef48effa75a8309e7fe6197a896b8'
+            client-secret: '{cipher}3fdc092d7bd28cc341871599df348b32408c64aa078c3ef86486c16d2e093072'
             authorization-grant-type: password
             token-uri: ${backend-uri}/oauth/token
             scope: openid,profile,email,phone,address
