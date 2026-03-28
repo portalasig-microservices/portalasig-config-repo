@@ -18,8 +18,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: '{cipher}c7246779c0d3d680f6b66c5065c1df107ad81a765b22a6434c4ca335a8cf7594a78d05a1d0c125eb6bbc1f81e0252d5119e2136e9afad8e5d5659c8c2c21daba'
-    password: '{cipher}e137d7f1328d162513ca00588bfc52ffc641d9a9ec93acf6a3395873a87594f1f92036e2841d28a2d57840181472eb9d'
+    username: '271303085597-t66mljr5ffkbatd6u3ni2mvlohef3mli.apps.googleusercontent.com'
+    password: '{cipher}c4bc789e36cb6c56e06488b9cde05f86d4d8fe045650477b7e87fc35473015f2c0194b98c8a1fcbd92f710d5ec8325a9a3c18c70d2597534083db6de70298610'
     properties:
       mail:
         smtp:
