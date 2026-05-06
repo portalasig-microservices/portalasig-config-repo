@@ -56,3 +56,5 @@ portalasig.uaa.ms:
 portalasig.notify.ms:
   v1.url: ${portalasig.services.notify}/v1
   url: ${portalasig.services.notify}
+portalasig.fe:
+  url: ${portalasig.services.frontend}
