@@ -39,7 +39,8 @@ backend-uri: http://localhost
 portalasig.security.auth-server-url: http://ms-uaa:5860/portalasig/uaa
 frontend-uri: http://localhost
 
-portalasig.security.oauth2.authorization-server.jwt.issuer-uri: ${backend-uri}:5860/portalasig/uaa
+portalasig.security.auth-server-url: http://ms-uaa:5860/portalasig/uaa
+portalasig.security.oauth2.authorization-server.jwt.issuer-uri: ${portalasig.security.auth-server-url}
 portalasig.uaa.ms:
   v1.url: ${backend-uri}:5860/portalasig/uaa/v1
   url: ${backend-uri}:5860/portalasig/uaa
