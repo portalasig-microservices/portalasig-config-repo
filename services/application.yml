@@ -37,7 +37,6 @@ spring:
 
 backend-uri: http://ms-uaa
 portalasig.security.auth-server-url: http://ms-uaa:5860/portalasig/uaa
-frontend-uri: http://localhost
 
 portalasig.security.oauth2.authorization-server.jwt.issuer-uri: ${portalasig.security.auth-server-url}
 portalasig.uaa.ms:
@@ -48,3 +47,13 @@ portalasig.notify.ms:
   url: ${backend-uri}:5862/portalasig/notify
 portalasig.fe:
   url: ${frontend-uri}:8080
+# URLs internas para Docker
+portalasig:
+  internal-services:
+    uaa: http://ms-uaa:5860/portalasig/uaa
+    site: http://ms-site:5861/portalasig/site
+    notify: http://ms-notify:5862/portalasig/notify
+
+# Compatibilidad
+backend-uri: http://localhost
+frontend-uri: http://localhost
