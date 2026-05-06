@@ -35,7 +35,8 @@ spring:
             token-uri: ${portalasig.uaa.ms.url}/oauth2/token
             authorization-uri: ${portalasig.uaa.ms.url}/oauth2/authorize
 
-backend-uri: http://ms-uaa
+backend-uri: http://localhost
+portalasig.security.auth-server-url: http://ms-uaa:5860/portalasig/uaa
 frontend-uri: http://localhost
 
 portalasig.security.oauth2.authorization-server.jwt.issuer-uri: ${backend-uri}:5860/portalasig/uaa
