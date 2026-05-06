@@ -29,3 +29,9 @@ ms.uaa:
       csv:
         input-header: name, lastname, email, identity_card, created_at, updated_at, role, active
       default-password: '{cipher}3fdc092d7bd28cc341871599df348b32408c64aa078c3ef86486c16d2e093072'
+
+spring:
+  security:
+    oauth2:
+      authorizationserver:
+        issuer: http://ms-uaa:5860/portalasig/uaa
