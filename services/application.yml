@@ -26,34 +26,33 @@ spring:
             client-id: portalasig_client
             client-secret: '{cipher}3fdc092d7bd28cc341871599df348b32408c64aa078c3ef86486c16d2e093072'
             authorization-grant-type: password
-            token-uri: ${backend-uri}/oauth/token
+            token-uri: ${portalasig.services.uaa}/oauth/token
             scope: openid,profile,email,phone,address
         provider:
           portalasig_engine:
-            token-uri: ${portalasig.uaa.ms.url}/oauth2/token
+            token-uri: ${portalasig.services.uaa}/oauth2/token
           portalasig_client:
-            token-uri: ${portalasig.uaa.ms.url}/oauth2/token
-            authorization-uri: ${portalasig.uaa.ms.url}/oauth2/authorize
+            token-uri: ${portalasig.services.uaa}/oauth2/token
+            authorization-uri: ${portalasig.services.uaa}/oauth2/authorize
 
-backend-uri: http://ms-uaa
-portalasig.security.auth-server-url: http://ms-uaa:5860/portalasig/uaa
-
-portalasig.security.oauth2.authorization-server.jwt.issuer-uri: ${portalasig.security.auth-server-url}
-portalasig.uaa.ms:
-  v1.url: ${backend-uri}:5860/portalasig/uaa/v1
-  url: ${backend-uri}:5860/portalasig/uaa
-portalasig.notify.ms:
-  v1.url: ${backend-uri}:5862/portalasig/notify/v1
-  url: ${backend-uri}:5862/portalasig/notify
-portalasig.fe:
-  url: ${frontend-uri}:8080
-# URLs internas para Docker
+# URLs de servicios (Docker por defecto)
 portalasig:
-  internal-services:
+  services:
     uaa: http://ms-uaa:5860/portalasig/uaa
     site: http://ms-site:5861/portalasig/site
     notify: http://ms-notify:5862/portalasig/notify
+    frontend: http://localhost:8080
 
-# Compatibilidad
-backend-uri: http://localhost
-frontend-uri: http://localhost
+  security:
+    auth-server-url: ${portalasig.services.uaa}
+    oauth2:
+      authorization-server:
+        jwt:
+          issuer-uri: ${portalasig.services.uaa}
+
+portalasig.uaa.ms:
+  v1.url: ${portalasig.services.uaa}/v1
+  url: ${portalasig.services.uaa}
+portalasig.notify.ms:
+  v1.url: ${portalasig.services.notify}/v1
+  url: ${portalasig.services.notify}
