@@ -38,9 +38,9 @@ spring:
 # URLs de servicios (Consistentemente localhost para consistencia del JWT)
 portalasig:
   services:
-    uaa: http://localhost:5860/portalasig/uaa
-    site: http://localhost:5861/portalasig/site
-    notify: http://localhost:5862/portalasig/notify
+    uaa: http://ms-uaa:5860/portalasig/uaa
+    site: http://ms-site:5861/portalasig/site
+    notify: http://ms-notify:5862/portalasig/notify
     frontend: http://localhost:8080
 
   security:
