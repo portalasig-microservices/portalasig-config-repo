@@ -7,9 +7,11 @@ spring:
   config.activate.on-profile: local
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:11110/patest
+    url: jdbc:mysql://mysql-uaa:3306/patest
     username: root
     password: '{cipher}3fdc092d7bd28cc341871599df348b32408c64aa078c3ef86486c16d2e093072'
+    hikari:
+      initialization-fail-timeout: -1
   flyway:
     user: root
     password: '{cipher}3fdc092d7bd28cc341871599df348b32408c64aa078c3ef86486c16d2e093072'
