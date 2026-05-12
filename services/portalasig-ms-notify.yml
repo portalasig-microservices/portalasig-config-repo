@@ -6,7 +6,7 @@ spring:
   config.activate.on-profile: local
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:11020/patest
+    url: jdbc:mysql://mysql-notify:3306/patest
     username: root
     password: '{cipher}3fdc092d7bd28cc341871599df348b32408c64aa078c3ef86486c16d2e093072'
   flyway:
@@ -14,7 +14,7 @@ spring:
     password: '{cipher}3fdc092d7bd28cc341871599df348b32408c64aa078c3ef86486c16d2e093072'
     schemas: patest
     locations: classpath:db/migration
-    url: jdbc:mysql://localhost:11020/
+    url: jdbc:mysql://mysql-notify:3306/patest
   mail:
     host: smtp.gmail.com
     port: 587
@@ -30,8 +30,15 @@ spring:
           connectiontimeout: 5000
           timeout: 5000
           writetimeout: 5000
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:5860/portalasig/uaa
 
 portalasig:
+  security:
+    jwk-set-uri: http://ms-uaa:5860/portalasig/uaa/oauth2/jwks
   notify:
     email:
       debug:

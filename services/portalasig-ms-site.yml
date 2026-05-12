@@ -15,6 +15,14 @@ spring:
     schemas: patest
     locations: classpath:db/migration
     url: jdbc:mysql://mysql-site:3306/patest
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:5860/portalasig/uaa
+
+portalasig.security:
+  jwk-set-uri: http://ms-uaa:5860/portalasig/uaa/oauth2/jwks
 
 site:
   semester:
