@@ -5,15 +5,6 @@ spring:
   application:
     flyway:
       enabled: true
-
-management:
-  endpoints.web.exposure.include: '*'
-  endpoint.health.show.details: always
-  metrics.export.prometheus.enabled: true
-
----
-spring:
-  config.activate.on-profile: local | docker
   security:
     oauth2:
       client:
@@ -35,7 +26,11 @@ spring:
             token-uri: ${portalasig.services.uaa}/oauth2/token
             authorization-uri: ${portalasig.services.uaa}/oauth2/authorize
 
-# URLs unificadas detrás del API Gateway (Nginx local)
+management:
+  endpoints.web.exposure.include: '*'
+  endpoint.health.show.details: always
+  metrics.export.prometheus.enabled: true
+
 portalasig:
   services:
     uaa: http://ms-uaa:5860/portalasig/uaa
@@ -48,13 +43,15 @@ portalasig:
     oauth2:
       authorization-server:
         jwt:
-          issuer-uri: http://localhost:5860/portalasig/uaa
+          issuer-uri: http://ms-uaa:5860/portalasig/uaa
 
 portalasig.uaa.ms:
   v1.url: ${portalasig.services.uaa}/v1
   url: ${portalasig.services.uaa}
+
 portalasig.notify.ms:
   v1.url: ${portalasig.services.notify}/v1
   url: ${portalasig.services.notify}
+
 portalasig.fe:
   url: ${portalasig.services.frontend}
