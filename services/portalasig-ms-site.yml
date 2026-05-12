@@ -3,7 +3,7 @@ server:
   port: 5861
 
 spring:
-  config.activate.on-profile: local
+  application.name: portalasig-ms-site
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://mysql-site:3306/patest
@@ -15,11 +15,6 @@ spring:
     schemas: patest
     locations: classpath:db/migration
     url: jdbc:mysql://mysql-site:3306/patest
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://ms-uaa:5860/portalasig/uaa
 
 portalasig.security:
   jwk-set-uri: http://ms-uaa:5860/portalasig/uaa/oauth2/jwks
@@ -35,3 +30,19 @@ site:
       import:
         input-header: NRO, LICENCIATURA, CEDULA, NOMBRES, APELLIDOS, CORREO, ESTADO
         email-blacklist: correo@servidor.com
+---
+spring:
+  config.activate.on-profile: local
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:5860/portalasig/uaa
+---
+spring:
+  config.activate.on-profile: docker
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://ms-uaa:5860/portalasig/uaa

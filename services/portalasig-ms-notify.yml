@@ -3,7 +3,7 @@ server:
   port: 5862
 
 spring:
-  config.activate.on-profile: local
+  application.name: portalasig-ms-notify
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://mysql-notify:3306/patest
@@ -30,11 +30,6 @@ spring:
           connectiontimeout: 5000
           timeout: 5000
           writetimeout: 5000
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          issuer-uri: http://ms-uaa:5860/portalasig/uaa
 
 portalasig:
   security:
@@ -44,3 +39,19 @@ portalasig:
       debug:
         enabled: true
         recipient: frankponte95@gmail.com
+---
+spring:
+  config.activate.on-profile: local
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:5860/portalasig/uaa
+---
+spring:
+  config.activate.on-profile: docker
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://ms-uaa:5860/portalasig/uaa
