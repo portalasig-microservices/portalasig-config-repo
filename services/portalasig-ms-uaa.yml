@@ -3,8 +3,6 @@ server:
   port: 5860
 
 spring:
-  autoconfigure:
-    exclude: com.portalasig.ms.notify.config.EmailClientAutoConfiguration
   application.name: portalasig-ms-uaa
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
