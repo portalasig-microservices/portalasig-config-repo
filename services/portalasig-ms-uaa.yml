@@ -31,6 +31,16 @@ ms.uaa:
         input-header: name, lastname, email, identity_card, created_at, updated_at, role, active
       default-password: '{cipher}3fdc092d7bd28cc341871599df348b32408c64aa078c3ef86486c16d2e093072'
 
+portalasig.uaa.ms:
+  v1.url: http://ms-uaa:5860/portalasig/uaa/v1
+  url: http://ms-uaa:5860/portalasig/uaa
+
+portalasig.notify.ms:
+  v1.url: http://ms-notify:5862/portalasig/notify/v1
+  url: http://ms-notify:5862/portalasig/notify
+
+portalasig.fe.url: http://localhost:8080
+
 ---
 spring:
   config.activate.on-profile: local
