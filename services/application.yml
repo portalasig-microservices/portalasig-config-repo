@@ -38,10 +38,10 @@ spring:
 # URLs de servicios (Consistentemente localhost para consistencia del JWT)
 portalasig:
   services:
-    uaa: http://host.docker.internal:5860/portalasig/uaa
-    site: http://host.docker.internal:5861/portalasig/site
-    notify: http://host.docker.internal:5862/portalasig/notify
-    frontend: http://host.docker.internal:8080
+    uaa: http://ms-uaa:5860/portalasig/uaa
+    site: http://ms-site:5861/portalasig/site
+    notify: http://ms-notify:5862/portalasig/notify
+    frontend: http://localhost:8080
 
   security:
     auth-server-url: ${portalasig.services.uaa}
