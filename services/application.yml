@@ -25,7 +25,7 @@ spring:
           portalasig_client:
             client-id: portalasig_client
             client-secret: '{cipher}3fdc092d7bd28cc341871599df348b32408c64aa078c3ef86486c16d2e093072'
-            authorization-grant-type: password
+            authorization-grant-type: password,client_credentials
             token-uri: ${portalasig.services.uaa}/oauth/token
             scope: openid,profile,email,phone,address
         provider:
