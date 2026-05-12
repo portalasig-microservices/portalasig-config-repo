@@ -25,7 +25,7 @@ spring:
   security:
     oauth2:
       authorizationserver:
-        issuer: http://ms-uaa:5860/portalasig/uaa
+        issuer: http://localhost:5860/portalasig/uaa
 
 ms.uaa:
   password-grant.default-client-id: portalasig_client
