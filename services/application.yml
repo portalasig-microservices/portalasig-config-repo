@@ -38,9 +38,9 @@ spring:
 # URLs unificadas detrás del API Gateway (Nginx local)
 portalasig:
   services:
-    uaa: http://portalasig.local/portalasig/uaa
-    site: http://portalasig.local/portalasig/site
-    notify: http://portalasig.local/portalasig/notify
+    uaa: http://ms-uaa:5860/portalasig/uaa
+    site: http://ms-site:5861/portalasig/site
+    notify: http://ms-notify:5862/portalasig/notify
     frontend: http://localhost:8080
 
   security:
@@ -48,7 +48,7 @@ portalasig:
     oauth2:
       authorization-server:
         jwt:
-          issuer-uri: ${portalasig.services.uaa}
+          issuer-uri: http://localhost:5860/portalasig/uaa
 
 portalasig.uaa.ms:
   v1.url: ${portalasig.services.uaa}/v1
