@@ -22,6 +22,17 @@ spring:
       jdbc.batch_size: 50
       order_inserts: true
       order_updates: true
+  security:
+    oauth2:
+      client:
+        registration:
+          portalasig_engine:
+            client-id: portalasig_engine
+            client-secret: '{cipher}3fdc092d7bd28cc341871599df348b32408c64aa078c3ef86486c16d2e093072'
+            authorization-grant-type: client_credentials
+        provider:
+          portalasig_engine:
+            token-uri: http://ms-uaa:5860/portalasig/uaa/oauth2/token
 
 ms.uaa:
   password-grant.default-client-id: portalasig_client
