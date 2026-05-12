@@ -19,13 +19,6 @@ spring:
 portalasig.security:
   jwk-set-uri: http://ms-uaa:5860/portalasig/uaa/oauth2/jwks
 
-portalasig.uaa.ms:
-  v1.url: http://ms-uaa:5860/portalasig/uaa/v1
-  url: http://ms-uaa:5860/portalasig/uaa
-
-portalasig.notify.ms:
-  v1.url: http://ms-notify:5862/portalasig/notify/v1
-  url: http://ms-notify:5862/portalasig/notify
 
 site:
   semester:

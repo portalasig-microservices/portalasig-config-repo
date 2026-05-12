@@ -13,7 +13,7 @@ management:
 
 ---
 spring:
-  config.activate.on-profile: local
+  config.activate.on-profile: local | docker
   security:
     oauth2:
       client:
