@@ -19,7 +19,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://localhost:5860/portalasig/uaa
+          issuer-uri: http://ms-uaa:5860/portalasig/uaa
 
 portalasig.security:
   jwk-set-uri: http://ms-uaa:5860/portalasig/uaa/oauth2/jwks
