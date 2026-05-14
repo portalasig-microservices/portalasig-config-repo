@@ -1,0 +1,52 @@
+server:
+  port: 8080
+
+spring:
+  application.name: paware
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql-paware:3306/paware
+    username: ${MYSQL_PAWARE_USER:paware}
+    password: ${MYSQL_PAWARE_PASSWORD:paware}
+  flyway:
+    enabled: true
+    user: ${MYSQL_PAWARE_USER:paware}
+    password: ${MYSQL_PAWARE_PASSWORD:paware}
+    schemas: paware
+    locations: classpath:db/migration
+    url: jdbc:mysql://mysql-paware:3306/paware
+
+paware:
+  mape:
+    enabled: true
+    cron: "0 */5 * * * *"
+  observability:
+    services:
+      - name: ms-uaa
+        health-url: http://ms-uaa:5860/portalasig/uaa/actuator/health
+      - name: ms-site
+        health-url: http://ms-site:5861/portalasig/site/actuator/health
+      - name: ms-notify
+        health-url: http://ms-notify:5862/portalasig/notify/actuator/health
+    prometheus-base-url: ${PAWARE_PROMETHEUS_BASE_URL:http://prometheus:9090}
+    prometheus-query: up
+    loki-base-url: ${PAWARE_LOKI_BASE_URL:http://loki:3100}
+    loki-query: '{container_name=~"portalasig-ms-uaa|portalasig-ms-site|portalasig-ms-notify"} |= "ERROR"'
+    loki-limit: 30
+    loki-window-minutes: 15
+  ai:
+    default-provider: openai
+    session:
+      enabled: true
+      max-messages: 12
+      ttl-minutes: 30
+    providers:
+      gemini: ${PAWARE_AI_GEMINI_API_KEY:}
+      openai: "{cipher}3e23d025305871a2b992afc29c5afc9e78ec2ef3021febd3d85e8dd231a27a3cb937be134814942f2799513ca38523372df9d3a098543a0a6e9acf6c6248b695e20a891112d7d5033a12a1c801f2f14d40f6fc30fcfbeec39bac405b2922c599316189003bf5cb6e7706ec389c44389e2d24cdb224ae1497b380831b08b3d7349f946e4f46e509c0f27025c43caee2dda70d2ca33933fe98c560e2deced21d0d80a986ebbad4e8458c39bd863cfc0ec649d45a5821b492548d5bac81fbde5214"
+  notification:
+    enabled: true
+    admin-emails: ${PAWARE_ADMIN_EMAILS:}
+    notify-url: ${portalasig.notify.ms.v1.url}/email
+    p2-hours: ${PAWARE_NOTIFY_P2_HOURS:6}
+    p3-hours: ${PAWARE_NOTIFY_P3_HOURS:24}
+    subject-prefix: '[PAWARE]'
