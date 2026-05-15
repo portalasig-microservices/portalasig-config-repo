@@ -1,6 +1,6 @@
 server:
   servlet.context-path: /portalasig/notify
-    port: 1025
+  port: 5862
 
 spring:
   application.name: portalasig-ms-notify
