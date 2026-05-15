@@ -25,6 +25,8 @@ spring:
         smtp:
           ssl:
             enable: true
+          ssl:
+            enable: true
           auth: true
           starttls:
             enable: false
