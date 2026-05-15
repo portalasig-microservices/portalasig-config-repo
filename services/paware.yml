@@ -57,7 +57,7 @@ paware:
         model: gpt-4o-mini
   notification:
     enabled: true
-    admin-emails: ${PAWARE_ADMIN_EMAILS:}
+    admin-emails: 
     notify-url: ${portalasig.notify.ms.v1.url}/email
     p2-hours: ${PAWARE_NOTIFY_P2_HOURS:6}
     p3-hours: ${PAWARE_NOTIFY_P3_HOURS:24}
