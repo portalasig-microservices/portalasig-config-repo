@@ -22,11 +22,11 @@ spring:
     password: '{cipher}ab28ca9278a9d2a2f869ae87cbe605fc020e7363641f7df2f8a8e3341f2cb8203153dc56fda4845fa00db7d32fa51728'
     properties:
       mail:
+        debug: true
         smtp:
           ssl:
             enable: true
-          ssl:
-            enable: true
+            trust: smtp.gmail.com
           auth: true
           starttls:
             enable: false
