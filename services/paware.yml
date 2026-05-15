@@ -21,10 +21,6 @@ portalasig:
     jwk-set-uri: http://ms-uaa:5860/portalasig/uaa/oauth2/jwks
 
 paware:
-  http:
-    proxy:
-      host: 172.17.0.1
-      port: 3128
   mape:
     enabled: true
     cron: "0 */5 * * * *"
