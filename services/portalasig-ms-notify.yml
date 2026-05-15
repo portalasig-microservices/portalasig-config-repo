@@ -1,6 +1,6 @@
 server:
   servlet.context-path: /portalasig/notify
-  port: 5862
+    port: 1025
 
 spring:
   application.name: portalasig-ms-notify
@@ -16,21 +16,20 @@ spring:
     locations: classpath:db/migration
     url: jdbc:mysql://mysql-notify:3306/patest
   mail:
-    host: smtp.gmail.com
-    port: 465
+    host: mailhog
+    port: 1025
     username: 'portaldeasignaturastest@gmail.com'
     password: '{cipher}ab28ca9278a9d2a2f869ae87cbe605fc020e7363641f7df2f8a8e3341f2cb8203153dc56fda4845fa00db7d32fa51728'
     properties:
       mail:
         debug: true
         smtp:
-          ssl:
-            enable: true
-            trust: smtp.gmail.com
-          auth: true
+          auth: false
           starttls:
             enable: false
             required: false
+          ssl:
+            enable: false
           connectiontimeout: 20000
           timeout: 20000
           writetimeout: 20000
