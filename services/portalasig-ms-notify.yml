@@ -17,7 +17,7 @@ spring:
     url: jdbc:mysql://mysql-notify:3306/patest
   mail:
     host: smtp.gmail.com
-    port: 587
+    port: 465
     username: 'portaldeasignaturastest@gmail.com'
     password: '{cipher}ab28ca9278a9d2a2f869ae87cbe605fc020e7363641f7df2f8a8e3341f2cb8203153dc56fda4845fa00db7d32fa51728'
     properties:
