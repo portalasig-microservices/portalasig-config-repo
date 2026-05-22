@@ -2,25 +2,25 @@ server:
   port: 8080
 
 spring:
-  application.name: paware
+  application.name: paima
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql-paware:3306/paware
-    username: ${MYSQL_PAWARE_USER:paware}
-    password: ${MYSQL_PAWARE_PASSWORD:paware}
+    url: jdbc:mysql://mysql-paima:3306/paima
+    username: ${MYSQL_PAWARE_USER:paima}
+    password: ${MYSQL_PAWARE_PASSWORD:paima}
   flyway:
     enabled: true
-    user: ${MYSQL_PAWARE_USER:paware}
-    password: ${MYSQL_PAWARE_PASSWORD:paware}
-    schemas: paware
+    user: ${MYSQL_PAWARE_USER:paima}
+    password: ${MYSQL_PAWARE_PASSWORD:paima}
+    schemas: paima
     locations: classpath:db/migration
-    url: jdbc:mysql://mysql-paware:3306/paware
+    url: jdbc:mysql://mysql-paima:3306/paima
 
 portalasig:
   security:
     jwk-set-uri: http://ms-uaa:5860/portalasig/uaa/oauth2/jwks
 
-paware:
+paima:
   http:
     proxy:
       host: 172.17.0.1
