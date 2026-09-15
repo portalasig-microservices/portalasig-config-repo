@@ -43,12 +43,21 @@ paima:
     loki-limit: 30
     loki-window-minutes: 15
   ai:
-    default-provider: openai
+    provider: kimi
+    default-provider: kimi
     session:
       enabled: true
       max-messages: 12
       ttl-minutes: 30
     providers:
+      kimi:
+        type: openai-compatible
+        # TLS relay inside the stack: the Moonshot edge rejects the JVM client
+        # fingerprint with a spurious geo-block; the nginx relay (OpenSSL) passes.
+        base-url: ${KIMI_BASE_URL:http://kimi-relay:8899}
+        model: kimi-k2.6
+        api-key: ${KIMI_API_KEY:}
+        temperature: 0.3
       gemini:
         api-key: "{cipher}cf3317c454308d335eb902b06e4d5c10885e0e41e9fa0534b69fbcf643cb850faff008e742499c097ca88632cd2f29e4f92c0c63d8a7a6a166e17d1b7668e353"
         model: gemini-1.5-pro
