@@ -27,7 +27,7 @@ paima:
       port: 3128
   mape:
     enabled: true
-    cron: "0 */5 * * * *"
+    cron: "*/10 * * * * *"
   observability:
     services:
       - name: ms-uaa
