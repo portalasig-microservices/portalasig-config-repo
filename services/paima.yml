@@ -43,13 +43,16 @@ paima:
     loki-limit: 30
     loki-window-minutes: 15
   ai:
-    provider: kimi
+    # Demo PoC: planner MAPE determinista (sin ruido LLM); el chat sigue con Kimi.
+    provider: rules
     default-provider: kimi
     session:
       enabled: true
       max-messages: 12
       ttl-minutes: 30
     providers:
+      rules:
+        type: rule-based
       kimi:
         type: openai-compatible
         # TLS relay inside the stack: the Moonshot edge rejects the JVM client
